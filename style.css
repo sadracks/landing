@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'open sans';
+}
+nav{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+}
+
+header{
+    background: hsla(317, 45%, 52%, 0.993);
+    background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);
+    background: linear-gradient(to right, hsl(340, 95%, 50%), hsl(317, 45%, 52%));
+    height: auto;
+    padding: 48px;
+    width: 100%;;
+}
+.container{
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-around;
+}
+
+img{
+    border-radius: 0% 0% 0% 40%;
+    display: block;
+    object-fit: cover;
+    height: 450px;
+    animation: Arriba 1.2s ease-in;
+}
+
+.textos{
+    width: 50%;
+    color:#fff;
+}
+
+.textos h1{
+    font-size: 60px;
+    animation: moverIzquierda 1s ease-in;
+}
+
+.textos h2{
+    font-size: 40px;
+    animation: moverDerecha 1s ease-in;
+}
+
+.textos a{
+    animation: Arriba 1s ease-in;
+}
+
+.icono{
+    display: block;
+    animation: moverIzquierda 1s ease;
+    z-index: 100000000;
+}
+
+.textos a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 30px;
+    border: 1px solid #fff;
+    width: 150px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.uno{
+    -webkit-clip-path:circle(0% at 0 0);
+    clip-path: circle(0% at 0 0);
+}
+
+.dos{
+    -webkit-clip-path:circle(0% at 0 0);
+    clip-path: circle(150% at 0 0);
+}
+
+
+.enlaces{
+    position: fixed;
+    display:flex;
+    top: 0  ;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    transition: all 1s ease;
+    background: hsla(317, 45%, 52%, 0.384);
+    background: -webkit-linear-gradient(to right, #8407f8, #d1129b);
+    background: linear-gradient(to right, hsl(226, 95%, 50%), hsl(317, 78%, 39%));
+}
+
+
+.wave{
+    background: hsla(317, 45%, 52%, 0.384);
+    background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);
+    background: linear-gradient(to right, hsl(340, 95%, 50%), hsl(317, 45%, 52%));
+}
+
+@keyframes moverIzquierda {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moverDerecha {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes Abajo {
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes Arriba {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@media screen and (max-width: 1000px){
+    img{
+        height: 400px;
+    }
+    .textos h1{
+        font-size: 44px;
+    }
+    .textos h2{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    img{
+        height: 330px;
+    }
+    .textos h1{
+        font-size: 30px;
+    }
+    .textos h2{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    img{
+        height: 290px;
+    }
+    .textos h1{
+        font-size: 30px;
+    }
+    .textos h2{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .container{
+        width: 100%;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    img{
+        height: 290px;
+    }
+    .textos h1{
+        font-size: 40px;
+    }
+    .textos h2{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .container{
+        width: 100%;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    img{
+        height: 240px;
+    }
+    .textos h1{
+        font-size: 25px;
+    }
+    .textos h2{
+        font-size: 17px;
+    }
+}
